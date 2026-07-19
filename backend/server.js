@@ -10,10 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Database Connection
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/social-media', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/social-media',
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log(err));
 
